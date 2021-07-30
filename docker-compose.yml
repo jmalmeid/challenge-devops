@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  router:
+      build: ./services/router
+      image: router:latest
+      volumes:
+        - ./services/router/nginx.conf:/etc/nginx/nginx.conf
+        - ./services/router/conf.d:/etc/nginx/conf.d
+        - ./log/nginx:/var/log/nginx
+      ports:
+        - 80:80
+      hostname: router
+      restart: unless-stopped
+
+  green-web:
+      build: ./services/web
+      image: web:latest
+      volumes:
+        - ./log/green-web:/var/log
+      hostname: green-web
+      restart: unless-stopped
+
+  blue-web:
+      build: ./services/web
+      image: web:latest
+      volumes:
+        - ./log/blue-web:/var/log
+      hostname: blue-web
+      restart: unless-stopped
