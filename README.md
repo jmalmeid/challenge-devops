@@ -11,6 +11,9 @@
 ## To test web application ab:
 ./test.sh
 
+## To verify what version is deployed:
+curl http://localhost/info
+
 ## Release Notes:
 
 > ## 0.0.2-SNAPSHOT (30/07/2021)
