@@ -10,3 +10,12 @@
 
 ## To test web application ab:
 ./test.sh
+
+## Release Notes:
+
+> ## v0.0.1 (30/07/2021)
+> 
+> #### Framework Enhancements:
+> 
+> #### Bug Fixes:
+> 
