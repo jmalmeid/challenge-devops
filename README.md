@@ -13,7 +13,16 @@
 
 ## Release Notes:
 
-> ## v0.0.1 (30/07/2021)
+> ## 0.0.2-SNAPSHOT (30/07/2021)
+> 
+> #### Framework Enhancements:
+> 
+ - [#1](https://github.com/jmalmeid/challenge-devops/issues/1) Info page
+>
+> #### Bug Fixes:
+> 
+>
+> ## 0.0.1-SNAPSHOT (30/07/2021)
 > 
 > #### Framework Enhancements:
 > 
