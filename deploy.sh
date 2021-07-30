@@ -24,13 +24,14 @@ else
     exit 1
 fi
 
-echo "Sleeping 5 seconds"
-sleep 5
+echo "Sleeping 20 seconds"
+sleep 20
 
 echo "Checking \"$NEW_WEB\" container"
-docker-compose exec -T $NEW_WEB curl -s 127.0.0.1/ | grep "$NEW_WEB"
+docker-compose exec -T $NEW_WEB curl -s 127.0.0.1/
 rv=$?
-if [ $rv -eq 0 ]; then
+n=`docker-compose exec -T $NEW_WEB curl -s 127.0.0.1/ | grep "$NEW_WEB" | wc -l`
+if [ $rv -eq 0 ] && [ $n -gt 0 ]; then
     echo "New \"$NEW_WEB\" container passed http check"
 else
     echo "\"$NEW_WEB\" container's check failed"
